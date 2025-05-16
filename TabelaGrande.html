@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         table {
-            border-collapse: collapse; /* Evita bordas duplas */
-            width: 100%; /* Ajusta a tabela ao tamanho da tela */
+            border-collapse: collapse;
+            /* Evita bordas duplas */
+            width: 100%;
+            /* Ajusta a tabela ao tamanho da tela */
         }
-        th, td {
-            border: 1px solid black; /* Borda de 1px, preta */
-            padding: 8px; /* Espaçamento interno */
+
+        th,
+        td {
+            border: 1px solid black;
+            /* Borda de 1px, preta */
+            padding: 8px;
+            /* Espaçamento interno */
             text-align: left;
         }
+
         .right {
             text-align: right;
         }
+
         caption {
             background-color: gray;
-            font-size: 1.5em; /* Tamanho da fonte */
-            font-weight: bold; /* Deixar o texto em negrito */
-            color: #000000; /* Cor cinza */
-            text-align: center; /* Alinha o título ao centro */
-            padding: 10px; /* Adiciona espaçamento ao redor do título */
+            font-size: 1.5em;
+            /* Tamanho da fonte */
+            font-weight: bold;
+            /* Deixar o texto em negrito */
+            color: #000000;
+            /* Cor cinza */
+            text-align: center;
+            /* Alinha o título ao centro */
+            padding: 10px;
+            /* Adiciona espaçamento ao redor do título */
         }
+
         tfoot {
             background-color: gray;
-            font-weight: bold; /* Deixar o texto em negrito */
-            color: #000000; /* Cor cinza */
-            text-align: center; /* Alinha o título ao centro */
-            padding: 10px; /* Adiciona espaçamento ao redor do título */
+            font-weight: bold;
+            /* Deixar o texto em negrito */
+            color: #000000;
+            /* Cor cinza */
+            text-align: center;
+            /* Alinha o título ao centro */
+            padding: 10px;
+            /* Adiciona espaçamento ao redor do título */
         }
     </style>
 </head>
+
 <body>
     <table>
         <caption>
@@ -41,10 +61,6 @@
         </caption>
         <thead>
             <tr>
-                <!-- Importante colocar o Escopo do título 
-                    col - colunas
-                    row - linhas 
-                -->
                 <th scope="col">Estado</th>
                 <th scope="col" style="width: 100px">População</th>
                 <th scope="col">Comando HTML Utilizado</th>
@@ -73,7 +89,9 @@
                 <td>'<del>Texto riscado</del>' e '<u>Texto sublinhado</u>'</td>
             </tr>
             <tr>
-                <td><p><sub>Bahia</sub></p></td>
+                <td>
+                    <p><sub>Bahia</sub></p>
+                </td>
                 <td class="right">14.141.626</td>
                 <td>'Texto sobrescrito'</td>
             </tr>
@@ -103,9 +121,13 @@
                 <td>'Texto monoespaçado'</td>
             </tr>
             <tr>
-                <td><pre>Mato Grosso</pre></td>
+                <td>
+                    <pre>Mato Grosso</pre>
+                </td>
                 <td class="right">3.658.813</td>
-                <td>'<pre>Texto pré-formado</pre>'</td>
+                <td>'
+                    <pre>Texto pré-formado</pre>'
+                </td>
             </tr>
             <tr>
                 <td><small>Paraíba</small></td>
@@ -118,7 +140,9 @@
                 <td>'<sub>Texto subscrito</sub>'</td>
             </tr>
             <tr>
-                <td><blockquote>Rio de Janeiro</blockquote></td>
+                <td>
+                    <blockquote>Rio de Janeiro</blockquote>
+                </td>
                 <td class="right">16.054.524</td>
                 <td>'<blockquote>Citação em bloco</blockquote>'</td>
             </tr>
@@ -154,4 +178,5 @@
 
     </table>
 </body>
+
 </html>

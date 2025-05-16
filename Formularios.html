@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Exercicio Formularios</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
-    <fieldset>
-        <legend>Dados pessoais</legend>
-        <p>
-            <label for="inome">Nome Completo:</label><br>
-            <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required placeholder="Digite seu nome completo">
-        </p>
-        <p>
-            <label for="iemail">E-mail:</label><br>
-            <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="seuemail@exemplo.com">
-        </p>
-        <p>
-            <label for="itel">Telefone (formato (xx)xxxx-xxxx)</label><br>
-            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(11)91234-5678">
-        </p>
-        <p>
-            <label for="isenha">Crie uma senha:</label><br>
-            <input type="password" name="senha" id="isenha" minlength="5" maxlength="20" required placeholder="Digite sua senha">
-        </p>
-        <p>
-            <label for="iidade">Idade:</label><br>
-            <input type="number" name="idade" id="iidade" minlength="5" maxlength="20" required placeholder="Sua idade">
-        </p>
-        <p>
-            <label for="iest">Estado de Entrega:</label><br>
-            <select name="estado" id="iest">
-                <option value="" selected> --Selecione seu Estado-- </option>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome Completo:</label><br>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required
+                    placeholder="Digite seu nome completo">
+            </p>
+            <p>
+                <label for="iemail">E-mail:</label><br>
+                <input type="email" name="email" id="iemail" autocomplete="email" required
+                    placeholder="seuemail@exemplo.com">
+            </p>
+            <p>
+                <label for="itel">Telefone (formato (xx)xxxx-xxxx)</label><br>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required
+                    placeholder="(11)91234-5678">
+            </p>
+            <p>
+                <label for="isenha">Crie uma senha:</label><br>
+                <input type="password" name="senha" id="isenha" minlength="5" maxlength="20" required
+                    placeholder="Digite sua senha">
+            </p>
+            <p>
+                <label for="iidade">Idade:</label><br>
+                <input type="number" name="idade" id="iidade" minlength="5" maxlength="20" required
+                    placeholder="Sua idade">
+            </p>
+            <p>
+                <label for="iest">Estado de Entrega:</label><br>
+                <select name="estado" id="iest">
+                    <option value="" selected> --Selecione seu Estado-- </option>
                     <option value="MG">Minas Geais</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="DF">Distrito Federal</option>
@@ -41,77 +48,81 @@
                     <option value="MA">Maranhão</option>
                     <option value="PE">Pernambuco</option>
                     <option value="RN">Rio Grande do Norte</option>
-            </select>
-        </p>
+                </select>
+            </p>
+            <p>
+                <label for="ifoto">Enviar uma foto da sua CNH:</label><br>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Escolha do Carro</legend>
+            <p>
+                <label for="ifoto">Escolha o modelo:</label><br>
+                <input type="radio" name="byd" id="iseal" value="BYD Seal"><label for="iseal">BYD Seal</label><br>
+                <input type="radio" name="byd" id="ihan" value="BYD Han"><label for="ihan">BYD Han</label><br>
+                <input type="radio" name="byd" id="iplus" value="BYD Song Plus"><label for="iplus">BYD Song Plus</label>
+            </p>
+            <p>
+                <label for="ifoto">Itens adicionais:</label><br>
+                <input type="checkbox" name="som" id="isom" value="Som"><label for="isom">Som Premium</label><br>
+                <input type="checkbox" name="arcondicionado" id="iarc" value="Ar-Condicionado"><label
+                    for="iarc">Ar-Condicionado Digital</label><br>
+                <input type="checkbox" name="camera" id="icamera" value="Camera"><label for="icamera">Câmera
+                    360º</label>
+            </p>
+            <p>
+                <label for="icor">Cor do carro:</label><br>
+                <input type="color" name="cor" id="icor" value="#000000">
+            </p>
+            <p>
+                <label for="inivel">Intencidade de cor (brilho):</label><br>
+                <input type="range" id="inivel" min="1" max="10" value="2">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Entrega</legend>
+            <p>
+                <label for="idia">Data desejada para entrega:</label><br>
+                <input type="date" name="data" id="idata" value="aaaa-mm-dd">
+            </p>
+            <p>
+                <label for="ihora">Hora preferida para entrega:</label><br>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <label for="ihora">Mês da compra:</label><br>
+                <input type="month" name="mes" id="imes">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Sua Opinião</legend>
+            <p>
+                <label for="imsg">Conte qual é a sua expectativa sobre o carro:</label><br>
+                <textarea name="" id="imsg" cols="36" rows="5"
+                    placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Avaliação dos Modelos BYD</legend>
+            <p>
+                <label for="imedia">Avalie o BYD Dolphin Plus</label><br>
+                <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
+            </p>
+            <p>
+                <label for="imedia">Avalie o BYD GS</label><br>
+                <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
+            </p>
+            <p>
+                <label for="imedia">Avalie o BYD Mini</label><br>
+                <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
+            </p>
+        </fieldset>
         <p>
-            <label for="ifoto">Enviar uma foto da sua CNH:</label><br>
-            <input type="file" name="foto" id="ifoto">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </p>
-    </fieldset>
-    <fieldset>
-        <legend>Escolha do Carro</legend>
-        <p>
-            <label for="ifoto">Escolha o modelo:</label><br>
-            <input type="radio" name="byd" id="iseal" value="BYD Seal"><label for="iseal">BYD Seal</label><br>
-            <input type="radio" name="byd" id="ihan" value="BYD Han"><label for="ihan">BYD Han</label><br>
-            <input type="radio" name="byd" id="iplus" value="BYD Song Plus"><label for="iplus">BYD Song Plus</label>
-        </p>
-        <p>
-            <label for="ifoto">Itens adicionais:</label><br>
-            <input type="checkbox" name="som" id="isom" value="Som"><label for="isom">Som Premium</label><br>
-            <input type="checkbox" name="arcondicionado" id="iarc" value="Ar-Condicionado"><label for="iarc">Ar-Condicionado Digital</label><br>
-            <input type="checkbox" name="camera" id="icamera" value="Camera"><label for="icamera">Câmera 360º</label>
-        </p>
-        <p>
-            <label for="icor">Cor do carro:</label><br>
-            <input type="color" name="cor" id="icor" value="#000000">
-        </p>
-        <p>
-            <label for="inivel">Intencidade de cor (brilho):</label><br>
-            <input type="range" id="inivel" min="1" max="10" value="2">
-        </p>
-    </fieldset>
-    <fieldset>
-        <legend>Entrega</legend>
-        <p>
-            <label for="idia">Data desejada para entrega:</label><br>
-            <input type="date" name="data" id="idata" value="aaaa-mm-dd">
-        </p>
-        <p>
-            <label for="ihora">Hora preferida para entrega:</label><br>
-            <input type="time" name="hora" id="ihora">
-        </p>
-        <p>
-            <label for="ihora">Mês da compra:</label><br>
-            <input type="month" name="mes" id="imes">
-        </p>
-    </fieldset>
-    <fieldset>
-        <legend>Sua Opinião</legend>
-        <p>
-            <label for="imsg">Conte qual é a sua expectativa sobre o carro:</label><br>
-            <textarea name="" id="imsg" cols="36" rows="5" placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea>
-        </p>
-    </fieldset>
-    <fieldset>
-        <legend>Avaliação dos Modelos BYD</legend>
-        <p>
-            <label for="imedia">Avalie o BYD Dolphin Plus</label><br>
-            <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
-        </p>
-        <p>
-            <label for="imedia">Avalie o BYD GS</label><br>
-            <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
-        </p>
-        <p>
-            <label for="imedia">Avalie o BYD Mini</label><br>
-            <input type="number" name="avalia" id="iavalia" min="0" max="5" placeholder="0 a 5 estrelas" required>
-        </p>
-    </fieldset>
-    <p>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
-    </p>
-</form>
+    </form>
 </body>
+
 </html>
